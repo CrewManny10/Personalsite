@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open sans', sans-serif;
+}
+
+.header {
+    display: flex ;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 20px 20%;
+    background-color:transparent;
+    background-repeat: no-repeat;
+    justify-content: space-between;
+  
+
+}
+
+.header .navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    align-items: center;
+    justify-content: space-between;
+     
+ }
+ 
+ .navbar{
+    position: relative;
+ }
+ 
+ .navbar .directory {
+     display: flex;
+     gap: 2rem; 
+ 
+ }
+ 
+ .directory a{
+     color: #e5e8e8;
+ }
+
+body{
+    background: #465249;
+}
+
+.card-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.card-list .card-item {
+    background: #280c52;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+
+.card-list .card-item:hover{
+    border: 2px solid #000;
+}
+
+.card-list .card-item img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-list span {
+    display: inline-bloack;
+    background: #F7DFF7;
+    margin-top: 32px;
+    padding: 8px 15px;
+    font-size: 0.75em;
+    border-radius: 50px;
+    font-weight: 600;
+
+}
+
+.card-list .developer {
+    background-color: #f7dff5;
+    color: #b22485;
+}
+.card-list .designer {
+    background-color: #f7dff5;
+    color: #2968a8;
+}
+.card-list .editor {
+    background-color: #f7dff5;
+    color: #205c20;
+}
+
+.card-item h3 {
+    color: #decece;
+    font-size: 1.438rem;
+    margin-top: 0;
+    padding: 14px;
+    font-weight: 600px;
+
+}
+
+.card-item .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color:#000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 20px;
+    transition: 0.2s ease;
+    
+}
+
+.card-list .card-item:hover .arrow {
+    background: #000;
+    color: #fff;
+
+}
+
+@media (max-width: 768px) {
+    .card-list .card-item {
+        padding: 15px;
+    }
+}
+
+@media  screen and (max-width: 980px) {
+    .card-list {
+        margin: 0 auto;
+    }
+    
+}

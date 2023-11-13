@@ -1,0 +1,423 @@
+@import url('https: //fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 1;
+    padding: 1;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body {
+    background: #39393a;
+    color: #252121;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 15%;
+    background-color: transparent;
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+
+}
+
+/* logo */
+.logo {
+    position: relative;
+    font-size: 35px;
+    color: #0f0e0e;
+    text-decoration: none;
+    font-weight: 650;
+
+}
+
+
+/* logo animation */
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #39393a;
+    animation: showRight 1s ease forwards;
+    animation-delay: .1s;
+
+}
+
+
+/* responsive navbar */
+a:hover {
+    color: #111010;
+}
+
+a.active {
+    font-size: 1rem;
+}
+
+.navbar {
+   width: 100%;
+   height: 60px;
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   gap: 2rem;
+   align-items: center;
+   align-items: center;
+   justify-content: space-between;
+    
+}
+
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+
+
+}
+
+.links a{
+    color: #050606;
+}
+
+
+.navbar .toggle_btn {
+    color: #221c1c;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: #121212;
+    color: #151414;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: #1e1a1a;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+/* dropdown_manu */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255,  0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu a{
+    color: #050606;
+    
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Resposive Design */
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+
+body {
+    height: 100vh;
+    background: url('img/batman3.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+
+
+.home-content {
+    max-width: 100%;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size:  56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* first hearder-Hi */
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #3a3939;
+    animation: showRight .1s ease forwards;
+    animation-delay: .1s;
+
+}
+
+/* second header-frontend */
+.home-content h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #19181b;
+
+}
+
+.home-content h3::before {
+    content: '';
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #39393a;
+    animation: showRight 1s ease forwards;
+    animation-delay: .1s;
+
+}
+
+/* first p tag */
+.home-content p {
+    position: relative;
+    font-size: 20px;
+    margin: 25px 0 40px;
+
+
+}
+
+/* first p tag */
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #3a3939;
+    animation: showRight 1s ease forwards;
+    animation-delay: .1s;
+
+}
+
+.home-content .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+ 
+}
+
+/* box display - hireMe */
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #3a3939;
+    animation: showRight 1s ease forwards;
+    animation-delay: .1s;
+    z-index: 2;
+
+}
+
+/* hireME & letsTalk */
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background:transparent;
+    border: 2px solid #070707;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #131314;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .1s;
+    
+}
+
+/* hireMe */
+.btn-box a:hover {
+    color:#47474e;
+}
+
+/* letsTalk */
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #151516;
+
+}
+
+/* letsTalk */
+.btn-box a:nth-child(2):hover {
+    background: transparent;
+    color: #4a4a4b;
+
+
+}
+
+/* letsTalk */
+.btn-box a:nth-child(2)::before {
+    background: #1f1f23;
+    color:#39393a
+
+}
+
+.btn-box  a::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #151516;
+    z-index: -1;
+    transition: .1s;
+    
+}
+
+.btn-box a:hover::before{
+    width: 100%;
+
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #39393a;
+    animation: showRight 1s ease forwards;
+    animation-delay: .1s;
+    z-index: 2;
+
+}
+
+
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #050606;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #d3660e;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .1s;
+}
+
+.home-sci a:hover {
+    color: #081b29;
+}
+
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #b5b0bb;
+    z-index: -1;
+    transition: .1s;
+}
+
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight {
+    100% {
+        width: 0;
+        background: transparent;
+        
+
+    }
+}

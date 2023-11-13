@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manny</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="navbar">
+        <a href="index.html" class="logo"> Manny...</a>
+
+        <ul class="links">
+          <a href="index.html">Home</a>
+          <a href="/site/about/about.html">About</a>
+          <a href="portfolio/port.html">Portfolio</a>
+          <a href="/site/contact.html">Contact</a>
+        </ul>
+
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu open">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="/site/about/about.html">About</a></li>
+        <li><a href="portfolio/port.html">Portfolio</a></li>
+        <li><a href="/site/contact.html">Contact</a></li>
+      </div>
+    </header>
+
+
+    <section class="home">
+      <div class="home-content">
+        <h1>HI, Welcome to Page</h1>
+
+        <h3> Happy Exploring !!!</h3>
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente
+          corporis vel odit provident recusandae, error ratione commodi, eveniet
+          id repellendus ipsa accusamus amet blanditiis eius, cumque optio.
+        </p>
+
+        <div class="btn-box">
+          <a href="#">Hire Me</a>
+          <a href="#">Let's Talk </a>
+        </div>
+      </div>
+
+      <div class="home-sci">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </section>
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropdownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropdownMenu.classList.toggle("open");
+        const isOpen = dropdownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+
+    <!-- <footer>
+        &copy; 2023 Copyright - Manny Ulysse
+      </footer> -->
+  </body>
+</html>
