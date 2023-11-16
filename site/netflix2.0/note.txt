@@ -1,0 +1,13 @@
+Step: 1
+    I begin the application by getting an access key to use 
+OMDBA API, which stands for Open Movie Database(free open API, provides vast amount of information about movies and tv shows).
+
+Step: 2 
+    Created a postman account to play with the API to see if it actually work, resulting in a JSON page.
+
+Step: 3 
+    The fun starts. Set up react
+
+Step: 4
+    In the app.js file created a state object to hold the list of the movies. later will be coming from the API.
+
