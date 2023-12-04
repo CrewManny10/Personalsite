@@ -77,6 +77,7 @@ const App = () => {
   // MovieListHeading holds the row that renders the selected favorite movie
   // Created removeFavoriteMovie function to remove movie from the favorite state
   // Passed Removedfavorite component and removeFavorite function to the movieList component
+  
   return (
     <div className='container-fluid movies'>
 

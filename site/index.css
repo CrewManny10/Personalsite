@@ -128,7 +128,7 @@ a.active {
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
-    transition: height .1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 0 .1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .dropdown_menu.open {
