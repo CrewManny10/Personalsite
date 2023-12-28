@@ -12,37 +12,42 @@ const App = () => {
   // A state object(movies) to hold the list of movies, state of search values, and state favorite objects
   // A state object(searchValue) that store what user has type
   const [movies, setMovies] = useState([]); 
-  const [searchValue, setSearchValue] = useState('');
   const [favorites, setFavorites] = useState([]);
+  const [searchValue, setSearchValue] = useState('');
+  
 
   // Function that call the API
   // Accepts (searchvalue) parameter
   // movie found from the search call are set to the movie state
-  const getMovieRequest = async (searchValue) => {
-    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=1190b3a6`;
-
-    const response = await fetch(url);
-    const responseJson = await response.json();
-
-    if (responseJson.Search) {
-      setMovies(responseJson.Search);
-    }
-  };
 
   // Ensure the API call occurs only when the app loads for the first time
   // Udating the (useEffect) hook when the searchValue changes
   // And pass new value to the (getMovieRequest) function
   useEffect(() => {
+    const getMovieRequest = async (searchValue) => {
+    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=1190b3a6`;
+    const response = await fetch(url);
+    const responseJson = await response.json();
+    if (responseJson.Search) {
+      setMovies(responseJson.Search);
+    }
+  };
     getMovieRequest(searchValue);
   }, [searchValue]);
+
+  console.log(searchValue);
 
   // The function saveToLocalStorage, takes a list of items and save them to local storage as a key
   // All movie on the favorite list are added to the local storage
   // When the app loads, the useEffect hook retrieve the favorite movie from the local storage
   // Saving the retrieved movies as state
   useEffect(() => {
+    try {
     const movieFavorites = JSON.parse(localStorage.getItem('saveKey'));
-    setFavorites(movieFavorites);
+    if (movieFavorites) {
+      setFavorites(movieFavorites);
+    }
+    } catch(e) {}
   }, []);
 
   const saveToLocalStorage = (items) => {
@@ -54,9 +59,14 @@ const App = () => {
     // Copy the array and add the new selected favorite to it
     // Save every back into the state
   const addFavoriteMovies = (movie) => {
-    const newFavoriteList = [...favorites, movie];
-    setFavorites(newFavoriteList);
-    saveToLocalStorage(newFavoriteList);
+    if (!favorites.some((favMovie) => favMovie.imdbID === movie.imdbID)) {
+      const newFavoriteList = [...favorites, movie];
+      setFavorites(newFavoriteList);
+      saveToLocalStorage(newFavoriteList);
+    } else {
+      console.log("Movie is already in favorite");
+    }
+
   };
 
   const removeFavoriteMovies = (movie) => {
