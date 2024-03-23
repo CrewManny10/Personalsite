@@ -7,6 +7,7 @@
     font-family: 'Poppins' , sans-serif;
 }
 
+
 body {
     background: #39393a;
     color: #252121;
@@ -210,8 +211,8 @@ body {
     width: 100%;
     height: 100%;
     background: #3a3939;
-    animation: showRight .1s ease forwards;
-    animation-delay: .1s;
+    animation: showRight 3s ease forwards;
+    animation-delay: .7s;
 
 }
 
@@ -232,8 +233,8 @@ body {
     width: 100%;
     height: 100%;
     background: #39393a;
-    animation: showRight 1s ease forwards;
-    animation-delay: .1s;
+    animation: showRight 4s ease forwards;
+    animation-delay: .7s;
 
 }
 
@@ -255,9 +256,8 @@ body {
     width: 100%;
     height: 100%;
     background: #3a3939;
-    animation: showRight 1s ease forwards;
-    animation-delay: .1s;
-
+    animation: showRight 5s ease forwards;
+    animation-delay: .8s;
 }
 
 .home-content .btn-box {
@@ -278,8 +278,8 @@ body {
     width: 100%;
     height: 100%;
     background: #3a3939;
-    animation: showRight 1s ease forwards;
-    animation-delay: .1s;
+    animation: showRight 6s ease forwards;
+    animation-delay: .8s;
     z-index: 2;
 
 }
@@ -359,6 +359,7 @@ body {
     justify-content: space-between;
 }
 
+
 .home-sci::before {
     content: '';
     position: absolute;
@@ -367,12 +368,11 @@ body {
     width: 100%;
     height: 100%;
     background: #39393a;
-    animation: showRight 1s ease forwards;
-    animation-delay: .1s;
+    animation: showRight 6s ease forwards;
+    animation-delay: .9s;
     z-index: 2;
 
 }
-
 
 
 .home-sci a {
